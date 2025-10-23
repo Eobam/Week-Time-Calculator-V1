@@ -5,8 +5,16 @@ import random
 total_time = int(input("How many minutes do you want?"))
 max_daily_minutes = int(input("What is the maximum amount of minutes you would like in a day?"))
 
-#Books
-books = ["Example", "Example2", "Example3" ]
+book1 = input("Please enter a book you want generated")
+
+book2 = input("Please enter a book you want generated")
+
+book3 = input("Please enter a book you want generated")
+
+book4 = input("Please enter a book you want generated")
+
+
+books = [ book1, book2, book3, book4]
 
 #Possible times for each day
 times = [ 0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
