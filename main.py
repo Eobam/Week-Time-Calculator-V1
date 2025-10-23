@@ -31,26 +31,36 @@ def daily_time_book():
 total_time_correct = False
 #Main
 while total_time_correct == False:
-    m = (random_time_choice(), random_book_choice())
-    tu = (random_time_choice(), random_book_choice())
-    wed = (random_time_choice(), random_book_choice())
-    th = ((random_time_choice(), random_book_choice()))
-    fr = (random_time_choice(), random_book_choice())
-    sa = (random_time_choice(), random_book_choice())
-    su = (random_time_choice(), random_book_choice())
-    output = m[0] + tu[0] + wed[0] + th[0] + fr[0] + sa[0] + su[0]
+    m_number = (int(random_time_choice())) 
+    m_book = (random_book_choice())
+    tu_number = (int(random_time_choice()))
+    tu_book = random_book_choice()
+    wed_number = (int(random_time_choice()))
+    wed_book = random_book_choice()
+    th_number = (int(random_time_choice())) 
+    th_book = random_book_choice()
+    fr_number = (int(random_time_choice()))
+    fr_book = random_book_choice()
+    sa_number = (int(random_time_choice()))
+    sa_book = random_book_choice()
+    su_number = (int(random_time_choice()))
+    su_book = random_book_choice()
+    output = m_number + tu_number + wed_number + th_number + fr_number + sa_number + su_number
 
     print("Total time calculated", output)
+
+    if any(day > max_daily_minutes for day in [m_number, tu_number, wed_number, th_number, fr_number, sa_number, su_number]):
+        continue
 
     if output == total_time:
         total_time_correct = True
         daily_time_book()
-        print(m)
-        print(tu)
-        print(wed)
-        print(th)
-        print(fr)
-        print(sa)
-        print(su)
+        print("monday", m_number, m_book)
+        print("tuesday",tu_number, tu_book)
+        print("wednesday", wed_number, wed_book)
+        print("thursday", th_number, th_book)
+        print("friday", fr_number, fr_book)
+        print("saturday", sa_number, sa_book)
+        print("sunday", su_number, su_book)
         break
 
