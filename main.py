@@ -31,40 +31,26 @@ def daily_time_book():
 total_time_correct = False
 #Main
 while total_time_correct == False:
-    book = random_book_choice()
-    new_time = random_time_choice()
-    m = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    tu = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    wed = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    th = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    fr = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    sa = (new_time, book)
-    book = random_book_choice()
-    new_time = random_time_choice()
-    su = (new_time, book)
-    print("test")
-    break
+    m = (random_time_choice(), random_book_choice())
+    tu = (random_time_choice(), random_book_choice())
+    wed = (random_time_choice(), random_book_choice())
+    th = ((random_time_choice(), random_book_choice()))
+    fr = (random_time_choice(), random_book_choice())
+    sa = (random_time_choice(), random_book_choice())
+    su = (random_time_choice(), random_book_choice())
+    output = m[0] + tu[0] + wed[0] + th[0] + fr[0] + sa[0] + su[0]
 
-if m + tu + wed + th + fr + sa +su == total_time:
-    total_time_correct = True
+    print("Total time calculated", output)
 
-if total_time_correct == True:
-    daily_time_book()
-    print(m)
-    print(tu)
-    print(wed)
-    print(th)
-    print(fr)
-    print(sa)
-    print(su)
+    if output == total_time:
+        total_time_correct = True
+        daily_time_book()
+        print(m)
+        print(tu)
+        print(wed)
+        print(th)
+        print(fr)
+        print(sa)
+        print(su)
+        break
 
