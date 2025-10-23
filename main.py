@@ -9,7 +9,7 @@ max_daily_minutes = int(input("What is the maximum amount of minutes you would l
 books = ["Example", "Example2", "Example3" ]
 
 #Possible times for each day
-times = [ "0", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"]
+times = [ 0, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
 
 #Choosing one of the times
 def random_time_choice():
@@ -25,8 +25,6 @@ def random_book_choice():
 def daily_time_book():
    pass
     
-
-
 
 
 
@@ -54,6 +52,8 @@ while total_time_correct == False:
     book = random_book_choice()
     new_time = random_time_choice()
     su = (new_time, book)
+    print("test")
+    break
 
 if m + tu + wed + th + fr + sa +su == total_time:
     total_time_correct = True
