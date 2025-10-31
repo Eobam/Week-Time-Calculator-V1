@@ -4,6 +4,7 @@ import random
 #global inputs
 total_time = int(input("How many minutes do you want?"))
 max_daily_minutes = int(input("What is the maximum amount of minutes you would like in a day?"))
+min_daily_minutes = int(input("What is the minimum amount of minutes you want calculated per day"))
 
 book1 = input("Please enter a book you want generated")
 
@@ -58,6 +59,9 @@ while total_time_correct == False:
     print("Total time calculated", output)
 
     if any(day > max_daily_minutes for day in [m_number, tu_number, wed_number, th_number, fr_number, sa_number, su_number]):
+        continue
+
+    if any(day < min_daily_minutes for day in [m_number, tu_number, wed_number, th_number, fr_number, sa_number, su_number]):
         continue
 
     if output == total_time:
